@@ -1,5 +1,3 @@
-name: hello-world
-on: push
 name: CI/CD Workflow
 
 on:
@@ -11,10 +9,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    steps;
-    - name: Check out repository code
-      uses: actions/checkout@v3
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
 
-    # Add more steps as needed for your workflow
+      # Add more steps as needed for your workflow
+      - name: Echo hello_world.txt
+        run: echo "$(cat hello_world.txt)"
 
-        - run: echo "$(cat hello_world.txt)"
